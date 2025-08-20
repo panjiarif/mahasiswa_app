@@ -16,6 +16,8 @@ class _InputDataPageState extends State<InputDataPage> {
   final TextEditingController _nimController = TextEditingController();
   final TextEditingController _namaController = TextEditingController();
   final TextEditingController _jurusanController = TextEditingController();
+  final TextEditingController _no_telpController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
   final TextEditingController _alamatController = TextEditingController();
 
   DateTime? _selectedDate;
@@ -45,6 +47,8 @@ class _InputDataPageState extends State<InputDataPage> {
         nama: _namaController.text,
         jurusan: _jurusanController.text,
         tanggal_lahir: _selectedDate!,
+        no_telp: _no_telpController.text,
+        email: _emailController.text,
         jenis_kelamin: _selectedJenisKelamin!,
         alamat: _alamatController.text,
       );
@@ -60,6 +64,8 @@ class _InputDataPageState extends State<InputDataPage> {
       _nimController.clear();
       _namaController.clear();
       _jurusanController.clear();
+      _no_telpController.clear();
+      _emailController.clear();
       _alamatController.clear();
       setState(() {
         _selectedDate = null;
@@ -146,6 +152,36 @@ class _InputDataPageState extends State<InputDataPage> {
                     },
                   ),
                 ),
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: _no_telpController,
+                decoration: const InputDecoration(
+                  labelText: 'No. Telephone',
+                  border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.phone),
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty)
+                    return 'No. Telephone tidak boleh kosong';
+                  return null;
+                },
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: _emailController,
+                decoration: const InputDecoration(
+                  labelText: 'Email',
+                  border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.email),
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty)
+                    return 'Email tidak boleh kosong';
+                  else if (!value.contains('@') || !value.contains('.'))
+                    return 'Format email salah';
+                  return null;
+                },
               ),
               const SizedBox(height: 16),
               DropdownButtonFormField<String>(

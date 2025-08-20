@@ -17,35 +17,39 @@ class DetailPage extends StatelessWidget {
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 10),
-            const Center(
-              // <-- Tambahkan Center untuk mengatur posisi ikon
-              child: CircleAvatar(
-                radius: 60, // Ukuran lingkaran
-                child: Icon(
-                  Icons.person,
-                  size: 80,
-                  color:
-                      Colors.blueGrey, // Anda bisa atur warna sesuai keinginan
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: 10),
+              const Center(
+                // <-- Tambahkan Center untuk mengatur posisi ikon
+                child: CircleAvatar(
+                  radius: 60, // Ukuran lingkaran
+                  child: Icon(
+                    Icons.person,
+                    size: 80,
+                    color:
+                        Colors.blueGrey, // Anda bisa atur warna sesuai keinginan
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 24,
-            ), // Beri jarak antara ikon dan data
-            _buildDetailRow('NIM', mahasiswa.nim),
-            _buildDetailRow('Nama', mahasiswa.nama),
-            _buildDetailRow('Jurusan', mahasiswa.jurusan),
-            _buildDetailRow('Tanggal Lahir',
-                DateFormat('dd MMMM yyyy').format(mahasiswa.tanggal_lahir)),
-            _buildDetailRow('Jenis Kelamin', mahasiswa.jenis_kelamin),
-            _buildDetailRow('Alamat', mahasiswa.alamat),
-          ],
+              const SizedBox(
+                height: 24,
+              ), // Beri jarak antara ikon dan data
+              _buildDetailRow('NIM', mahasiswa.nim),
+              _buildDetailRow('Nama', mahasiswa.nama),
+              _buildDetailRow('Jurusan', mahasiswa.jurusan),
+              _buildDetailRow('Tanggal Lahir',
+                  DateFormat('dd MMMM yyyy').format(mahasiswa.tanggal_lahir)),
+              _buildDetailRow('Jenis Kelamin', mahasiswa.jenis_kelamin),
+              _buildDetailRow('No. Telephone', mahasiswa.no_telp),
+              _buildDetailRow('Email', mahasiswa.email),
+              _buildDetailRow('Alamat', mahasiswa.alamat),
+            ],
+          ),
         ),
       ),
     );

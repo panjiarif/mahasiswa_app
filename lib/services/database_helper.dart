@@ -34,6 +34,8 @@ class DatabaseHelper {
         nama TEXT,
         jurusan TEXT,
         tanggal_lahir TEXT,
+        no_telp TEXT,
+        email TEXT,
         jenis_kelamin TEXT,
         alamat TEXT
       )

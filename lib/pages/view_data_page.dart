@@ -6,7 +6,6 @@ import '../models/mahasiswa.dart';
 import '../services/database_helper.dart';
 import 'detail_data_page.dart';
 import 'edit_data_page.dart';
-import 'input_data_page.dart';
 
 class ViewDataPage extends StatefulWidget {
   const ViewDataPage({super.key});
@@ -151,16 +150,6 @@ class _ViewDataPageState extends State<ViewDataPage> {
             );
           }
         },
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          await Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const InputDataPage()),
-          );
-          _refreshMahasiswaList();
-        },
-        child: const Icon(Icons.add),
       ),
     );
   }
