@@ -224,8 +224,14 @@ class _InputDataPageState extends State<InputDataPage> {
               ),
               const SizedBox(height: 24),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white),
                 onPressed: _saveData,
-                child: const Text('Simpan Data'),
+                child: const Text(
+                  'Simpan Data',
+                  style: TextStyle(fontSize: 16),
+                ),
               ),
             ],
           ),

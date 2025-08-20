@@ -1,5 +1,3 @@
-// lib/pages/info_page.dart
-
 import 'package:flutter/material.dart';
 import 'package:mahasiswa_app/pages/login_page.dart';
 
@@ -71,9 +69,14 @@ class InfoPage extends StatelessWidget {
                     (Route<dynamic> route) => false,
                   );
                 },
-                icon: const Icon(Icons.logout),
+                icon: const Icon(
+                  Icons.logout,
+                  color: Colors.white,
+                ),
                 label: const Text('Logout'),
                 style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red,
+                  foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(vertical: 16.0),
                 ),
               ),

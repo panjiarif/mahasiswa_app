@@ -10,7 +10,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  // Controller untuk mengambil nilai dari TextField
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
@@ -19,7 +18,6 @@ class _LoginPageState extends State<LoginPage> {
   // Method untuk memvalidasi login
   void _login() {
     // Logika validasi sederhana
-    // Gantilah dengan logika validasi yang lebih kuat nanti
     if (_usernameController.text == 'admin' &&
         _passwordController.text == 'admin123') {
       // Login berhasil, navigasi ke halaman dashboard
@@ -51,6 +49,15 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const SizedBox(height: 16),
+            SizedBox(
+              width: 80,
+              height: 80,
+              child: Image.asset(
+                'assets/folder.png',
+              ),
+            ),
+            SizedBox(height: 10),
             const Text(
               'Silakan Login Terlebih Dahulu',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -90,9 +97,17 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const SizedBox(height: 24),
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                foregroundColor: Colors.white,
+                minimumSize: const Size(double.infinity, 40),
+              ),
               onPressed: _login,
-              child: const Text('Login'),
-            ),
+              child: const Text(
+                'Login',
+                style: TextStyle(fontSize: 16),
+              ),
+            )
           ],
         ),
       ),

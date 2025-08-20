@@ -1,5 +1,3 @@
-// lib/main.dart
-
 import 'package:flutter/material.dart';
 import 'package:mahasiswa_app/pages/splash_screen.dart';
 import 'package:mahasiswa_app/services/database_helper.dart';
@@ -21,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Aplikasi Mahasiswa',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.blue,
+          seedColor: Colors.blueAccent,
         ),
         useMaterial3: true,
       ),

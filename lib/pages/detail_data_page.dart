@@ -1,5 +1,3 @@
-// lib/pages/detail_page.dart
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:mahasiswa_app/models/mahasiswa.dart';

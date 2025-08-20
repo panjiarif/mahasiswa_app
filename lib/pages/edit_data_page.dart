@@ -1,5 +1,3 @@
-// lib/pages/edit_data_page.dart
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -208,8 +206,12 @@ class _EditDataPageState extends State<EditDataPage> {
               ),
               const SizedBox(height: 24),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white),
                 onPressed: _updateData,
-                child: const Text('Simpan Perubahan'),
+                child: const Text('Simpan Perubahan',
+                    style: TextStyle(fontSize: 16)),
               ),
             ],
           ),
