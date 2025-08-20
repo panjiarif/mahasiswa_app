@@ -82,27 +82,39 @@ class _EditDataPageState extends State<EditDataPage> {
             children: [
               TextFormField(
                 controller: _nimController,
-                decoration: const InputDecoration(labelText: 'NIM', border: OutlineInputBorder()),
+                decoration: const InputDecoration(
+                    labelText: 'NIM',
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.credit_card)),
                 validator: (value) {
-                  if (value == null || value.isEmpty) return 'NIM tidak boleh kosong';
+                  if (value == null || value.isEmpty)
+                    return 'NIM tidak boleh kosong';
                   return null;
                 },
               ),
               const SizedBox(height: 16),
               TextFormField(
                 controller: _namaController,
-                decoration: const InputDecoration(labelText: 'Nama', border: OutlineInputBorder()),
+                decoration: const InputDecoration(
+                    labelText: 'Nama',
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.person)),
                 validator: (value) {
-                  if (value == null || value.isEmpty) return 'Nama tidak boleh kosong';
+                  if (value == null || value.isEmpty)
+                    return 'Nama tidak boleh kosong';
                   return null;
                 },
               ),
               const SizedBox(height: 16),
               TextFormField(
                 controller: _jurusanController,
-                decoration: const InputDecoration(labelText: 'Jurusan', border: OutlineInputBorder()),
+                decoration: const InputDecoration(
+                    labelText: 'Jurusan',
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.school)),
                 validator: (value) {
-                  if (value == null || value.isEmpty) return 'Jurusan tidak boleh kosong';
+                  if (value == null || value.isEmpty)
+                    return 'Jurusan tidak boleh kosong';
                   return null;
                 },
               ),
@@ -111,10 +123,15 @@ class _EditDataPageState extends State<EditDataPage> {
                 onTap: () => _pickDate(context),
                 child: AbsorbPointer(
                   child: TextFormField(
-                    controller: TextEditingController(text: DateFormat('dd MMMM yyyy').format(_selectedDate)),
-                    decoration: const InputDecoration(labelText: 'Tanggal Lahir', border: OutlineInputBorder()),
+                    controller: TextEditingController(
+                        text: DateFormat('dd MMMM yyyy').format(_selectedDate)),
+                    decoration: const InputDecoration(
+                        labelText: 'Tanggal Lahir',
+                        border: OutlineInputBorder(),
+                        prefixIcon: Icon(Icons.calendar_today)),
                     validator: (value) {
-                      if (value == null || value.isEmpty) return 'Tanggal lahir tidak boleh kosong';
+                      if (value == null || value.isEmpty)
+                        return 'Tanggal lahir tidak boleh kosong';
                       return null;
                     },
                   ),
@@ -123,7 +140,10 @@ class _EditDataPageState extends State<EditDataPage> {
               const SizedBox(height: 16),
               DropdownButtonFormField<String>(
                 value: _selectedJenisKelamin,
-                decoration: const InputDecoration(labelText: 'Jenis Kelamin', border: OutlineInputBorder()),
+                decoration: const InputDecoration(
+                    labelText: 'Jenis Kelamin',
+                    border: OutlineInputBorder(),
+                    prefix: Icon(Icons.wc)),
                 items: _jenisKelaminOptions.map((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
@@ -139,10 +159,14 @@ class _EditDataPageState extends State<EditDataPage> {
               const SizedBox(height: 16),
               TextFormField(
                 controller: _alamatController,
-                decoration: const InputDecoration(labelText: 'Alamat', border: OutlineInputBorder()),
+                decoration: const InputDecoration(
+                    labelText: 'Alamat',
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.location_on)),
                 maxLines: 3,
                 validator: (value) {
-                  if (value == null || value.isEmpty) return 'Alamat tidak boleh kosong';
+                  if (value == null || value.isEmpty)
+                    return 'Alamat tidak boleh kosong';
                   return null;
                 },
               ),
