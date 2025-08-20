@@ -14,12 +14,15 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Detail Data Mahasiswa'),
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const SizedBox(height: 10),
             const Center(
               // <-- Tambahkan Center untuk mengatur posisi ikon
               child: CircleAvatar(
@@ -32,8 +35,9 @@ class DetailPage extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 24), // Beri jarak antara ikon dan data
-            _buildDetailRow('NIM', mahasiswa.nim),
+            const SizedBox(
+              height: 24,
+            ), // Beri jarak antara ikon dan data
             _buildDetailRow('NIM', mahasiswa.nim),
             _buildDetailRow('Nama', mahasiswa.nama),
             _buildDetailRow('Jurusan', mahasiswa.jurusan),

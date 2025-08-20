@@ -73,6 +73,8 @@ class _EditDataPageState extends State<EditDataPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Ubah Data Mahasiswa'),
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

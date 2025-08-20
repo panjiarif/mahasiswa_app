@@ -26,12 +26,11 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Colors.blue, // Sesuaikan warna latar belakang
+      backgroundColor: Colors.blue,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Tambahkan logo atau teks di sini
             Text(
               'Aplikasi Data Mahasiswa',
               style: TextStyle(

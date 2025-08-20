@@ -117,6 +117,8 @@ class _ViewDataPageState extends State<ViewDataPage> {
             onPressed: _refreshMahasiswaList,
           ),
         ],
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
       ),
       body: FutureBuilder<List<Mahasiswa>>(
         future: _mahasiswaList,
@@ -156,7 +158,7 @@ class _ViewDataPageState extends State<ViewDataPage> {
             context,
             MaterialPageRoute(builder: (context) => const InputDataPage()),
           );
-          _refreshMahasiswaList(); // Muat ulang data setelah menambahkan data baru
+          _refreshMahasiswaList();
         },
         child: const Icon(Icons.add),
       ),

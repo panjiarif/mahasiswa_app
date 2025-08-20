@@ -77,6 +77,8 @@ class _InputDataPageState extends State<InputDataPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Input Data Mahasiswa'),
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

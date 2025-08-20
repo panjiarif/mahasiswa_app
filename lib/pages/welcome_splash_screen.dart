@@ -13,8 +13,7 @@ class _WelcomeSplashScreenState extends State<WelcomeSplashScreen> {
   @override
   void initState() {
     super.initState();
-    // Atur timer yang lebih singkat, misalnya 2 detik
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (context) => const DashboardPage(),
@@ -26,7 +25,7 @@ class _WelcomeSplashScreenState extends State<WelcomeSplashScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Colors.green, // Warna yang berbeda untuk membedakan
+      backgroundColor: Colors.green,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -38,10 +37,19 @@ class _WelcomeSplashScreenState extends State<WelcomeSplashScreen> {
             ),
             SizedBox(height: 20),
             Text(
-              'Login Berhasil! Selamat Datang',
+              'Login Berhasil!',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Selamat Datang',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 25,
                 fontWeight: FontWeight.bold,
               ),
             ),
