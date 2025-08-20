@@ -19,6 +19,15 @@ class DashboardPage extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(16.0),
         children: [
+          SizedBox(height: 16),
+          SizedBox(
+            width: 150,
+            height: 150,
+            child: Image.asset(
+              'assets/logo.png',
+            ),
+          ),
+          SizedBox(height: 16),
           // Menu "Lihat Data"
           Card(
             elevation: 4,
