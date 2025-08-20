@@ -32,7 +32,6 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Tambahkan logo atau teks di sini
-            SizedBox(height: 20),
             Text(
               'Aplikasi Data Mahasiswa',
               style: TextStyle(
@@ -41,6 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            SizedBox(height: 20),
             CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
             ),
